@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3</title>
+</head>
+<body>
+<form>
+Enter Name:<br><input type="text" id="name" required=""><br>
+Enter Email:<br><input type="email" id="email" required 
+onblur="(function(id){
+	                      var email1=document.getElementById(id).value
+	                      function validate(){
+	                      var re =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	                      return re.test(email1);
+
+	                      }
+	                      alert(validate());
+
+})('email');">
+><br>
+Enter Number:<br><input type="number" id="number" required><br>
+Address field 1:<br><input type="text" id="address" size="35"><br>
+Address field 2:<br><input type="text" id="address" size="35"><br>
+<input type="submit" onclick="myfun(document.getElementById('email').value)">
+</form>
+
+<!-- <script type="text/javascript">
+
+         
+   	function myfun(x){
+   		
+   		var atpos=x.indexOf("@");
+   		var dotpos=x.indexOf(".");
+   		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");}
+        else alert("valid e-mail address");
+        return;
+
+         
+   	}
+   </script> -->
+
+</body>
+</html>

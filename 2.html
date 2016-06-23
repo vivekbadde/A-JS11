@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2</title>
+</head>
+<body>
+<p id='demo'>sger</p>
+
+<form>
+	Enter Email:<input type="text" id="email"><br>
+	<button onclick="myfun(document.getElementById('email').value)">Validate</button>
+   <script type="text/javascript">
+
+         
+   	function myfun(x){
+   		
+   		var atpos=x.indexOf("@");
+   		var dotpos=x.indexOf(".");
+   		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");}
+        else alert("valid e-mail address");
+        return;
+
+         
+   	}
+   </script>
+</form>
+</body>
+</html>

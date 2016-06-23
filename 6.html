@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6</title>
+</head>
+<body>
+
+<p id="demo")></p>
+<script>
+var person = {firstName:"John", lastName:"Doe", email:"someemail@gmail.com", phoneNumber:123456789};
+
+for(var i in person)
+{
+	var node = document.createElement("p");
+    var textnode = document.createTextNode(person[i]);
+    node.appendChild(textnode);
+    document.getElementById("demo").appendChild(node);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
